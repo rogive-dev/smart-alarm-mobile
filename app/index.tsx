@@ -3,14 +3,14 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSelector } from 'react-redux';
 import { Appbar, FAB, Menu } from 'react-native-paper';
 import { router } from 'expo-router';
-​
+
 import Alarm from '../components/alarm';
-​
+
 export default function Dashboard() {
   const { alarms } = useSelector((state: any) => state.alarm);
   const [open, setOpen] = useState(false);
-​
-  return (
+
+return (
     <View style={styles.container}>
       <Appbar.Header>
         <Appbar.Content title="Alarmas" />
@@ -38,7 +38,7 @@ export default function Dashboard() {
     </View>
   );
 }
-​
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
